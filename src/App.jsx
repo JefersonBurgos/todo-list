@@ -12,9 +12,11 @@ export default function App() {
 		return JSON.parse(localValue)
 	})
 
+	//if (todos.length > 0) {
 	useEffect(() => {
-		localStorage.setItem("ITEMS", json.stringify(todos))
+		localStorage.setItem("ITEMS", JSON.stringify(todos))
 	}, [todos])
+	//}
 
 	function addTodo(title) {
 		setTodos(currentTodos => {
